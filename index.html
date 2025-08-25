@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTONOMED - Ecosistemas de Medios Nativos Digitales Chile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            margin-top: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #4f46e5;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #4f46e5;
+        }
+        
+        .stats-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4f46e5;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+        
+        .features-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            padding: 30px;
+            border-left: 4px solid #4f46e5;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        .contact-section {
+            background: #1e293b;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            padding: 20px;
+        }
+        
+        .contact-item a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AUTONOMED</h1>
+            <p class="subtitle">Ecosistemas de Medios Nativos Digitales Chile</p>
+            <p>Análisis exhaustivo del panorama de medios digitales chilenos: modelos de negocio, audiencias, impacto social y sostenibilidad en el ecosistema informativo nacional.</p>
+            
+            <div class="cta-buttons">
+                <a href="#investigacion" class="btn btn-primary">Explorar Investigación</a>
+                <a href="#contacto" class="btn btn-secondary">Ver Directorio</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Medios digitales analizados en Chile</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2019-2025</div>
+                    <div class="stat-label">Período de investigación Post-estallido social</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Regiones del país cubiertas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Datos abiertos para la comunidad</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section" id="investigacion">
+        <div class="container">
+            <h2 class="section-title">Investigación Integral</h2>
+            <p class="section-subtitle">
+                Análisis multidimensional del ecosistema de medios nativos digitales combinando metodologías cuantitativas y cualitativas
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="feature-title">🗺️ Mapeo Territorial</h3>
+                    <p class="feature-description">
+                        Identificación geográfica y análisis regional de medios digitales en todas las regiones de Chile, desde centros urbanos hasta localidades rurales.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">💰 Modelos de Negocio</h3>
+                    <p class="feature-description">
+                        Análisis de estructuras de financiamiento, sostenibilidad económica y estrategias de monetización de los medios nativos digitales.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">👥 Impacto Social</h3>
+                    <p class="feature-description">
+                        Evaluación del rol en movimientos sociales, participación ciudadana y configuración de la agenda pública, especialmente post-estallido social.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">📰 Análisis de Contenido</h3>
+                    <p class="feature-description">
+                        Investigación de líneas editoriales, temáticas predominantes, enfoques periodísticos y estrategias de engagement con audiencias.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">💻 Tecnología y Plataformas</h3>
+                    <p class="feature-description">
+                        Evaluación de infraestructura tecnológica, presencia digital y estrategias multiplataforma de los medios estudiados.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">📊 Datos Abiertos</h3>
+                    <p class="feature-description">
+                        Datasets públicos, APIs abiertas y recursos disponibles para investigadores, periodistas y la comunidad académica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Colabora con AUTONOMED</h2>
+            <p class="section-subtitle">
+                Únete a nuestra red de investigación sobre medios digitales en Chile
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <a href="mailto:contacto@autonomed.cl">contacto@autonomed.cl</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>🐦 Twitter</h3>
+                    <a href="https://twitter.com/autonomed_cl" target="_blank">@autonomed_cl</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>📱 GitHub</h3>
+                    <a href="https://github.com/renejara-hub/autonomed-web" target="_blank">Código Abierto</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>🌍 Ubicación</h3>
+                    <p>Santiago, Chile</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AUTONOMED - Ecosistemas de Medios Digitales Chile. Investigación académica de acceso abierto.</p>
+        </div>
+    </footer>
+</body>
+</html>
